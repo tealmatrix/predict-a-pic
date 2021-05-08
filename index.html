@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/app.css" />
+    <link rel="stylesheet" href="./assets/fonts/DankMono-Bold.otf" />
+
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <title>Remote Viewing</title>
+  </head>
+
+  <header id="viewing">
+    <h1>Remote Viewing</h1>
+  </header>
+  <body>
+    <main>
+      <div id="container">
+        <div id="marginLeft"></div>
+        <div class="newSession">
+          <div class="dropdown">
+            <button
+              type="button"
+              class="btn btn-primary dropdown-toggle"
+              data-toggle="dropdown"
+            >
+              Lotteries
+            </button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="pick.html">Pick 2.3.4</a>
+              <a class="dropdown-item" href="sixfortynine.html">649</a>
+              <a class="dropdown-item" href="max.html">Max</a>
+              <a class="dropdown-item" href="index.html">ONE</a>
+            </div>
+          </div>
+          <div class="newSession">
+            Number Generator
+            <p id="gen"></p>
+
+            <button onclick="myFunction()">Try it</button>
+          </div>
+
+          <div class="imagesRandom" id="imagePad">
+            <a href="#" onClick="pickimg();return false;">
+              <img
+                src="./assets/images/1.jpg"
+                class="responsive"
+                name="randimg"
+                border="0"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script>
+      function myFunction() {
+        var x = Math.floor(Math.random() * 100001 + 111111);
+        document.getElementById("gen").innerHTML = x;
+      }
+    </script>
+    <script type="text/javascript" src="./scripts/app.js"></script>
+  </body>
+  <footer>&copy; Teal Matrix . WHATEVER RIGHTS RESERVED</footer>
+</html>
